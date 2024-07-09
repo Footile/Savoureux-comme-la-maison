@@ -1,131 +1,109 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Savoureux comme à la maison</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savoureux comme à la maison</title>
 
-		<!-- Bootstrap reboot (для сброса стилей) -->
-		<link rel="stylesheet" href="file:///C:/Users/Footile/Desktop/Site/page1/practice-starter-template-main/css/styles.css">
+    <!-- Bootstrap reboot (для сброса стилей) -->
+    <link rel="stylesheet" href="css/styles.css">
 
-		<!-- Bootstrap сетка -->
-		<link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+    <!-- Bootstrap сетка -->
+    <link rel="stylesheet" href="libs/bootstrap-grid.min.css">
 
-		<!-- Шрифты с Google Fonts -->
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Шрифты с Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-		<!-- Стили сайта -->
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="file:///C:/Users/Footile/Desktop/Site/page1/practice-starter-template-main/css/styles.css">
+    <!-- Стили сайта -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
+    <style>
+        .info {
+            overflow: auto; 
+            word-wrap: break-word; 
+            max-width: 65%; 
+        }
+    </style>
+</head>
+<body>
 
-		
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html">Savoureux comme à la maison</a>
 
-		<style>
-			.info {
-				overflow: auto; 
-				word-wrap: break-word; 
-				max-width: 65%; 
-			}
+            <div class="navbar-wrap">
+                <ul class="navbar-menu">
+                    <li><a href="contacts/menu.html">О нас</a></li>
+                    <li><a href="menu/index.html">Меню</a></li>
+                    <li><a href="contacts/menu.html">Контакты</a></li>
+                </ul>
+                <a href="tel:+41778175890" class="callback">Позвонить</a>
+            </div>
+        </div>
+    </nav>
 
-			
-		</style>
+    <style>
+    /* Стили для выпадающего меню */
+    .dropdown {
+        position: absolute;
+        top: 20px; /* Отступ сверху */
+        right: 100px; /* Отступ справа */
+    }
 
-	</head>
-	<body>
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
 
-		<nav class="navbar">
-			<div class="container">
-				<a href="file:///C:/Users/Footile/Desktop/Site/page1/practice-starter-template-main/index.html">Savoureux comme à la maison</a>
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
 
-				<div class="navbar-wrap">
-					<ul class="navbar-menu">
-						<li><a href="file:///C:/Users/Footile/Desktop/Site/contacts/menu.html">О нас</a></li>
-						<li><a href="file:///C:/Users/Footile/Desktop/Site/menu/practice-starter-template-main/index.html">Меню</a></li>
-						<li><a href="file:///C:/Users/Footile/Desktop/Site/contacts/menu.html">Контакты</a></li>
-					</ul>
-		
-					<a href="+41 77 817 58 90" class="callback">Позвонить</a>
-				</div>
-			
-			</div>
-		</nav>
-		
-		
-		<style>
-		/* Стили для выпадающего меню */
-		.dropdown {
-			position: absolute;
-			top: 20px; /* Отступ сверху */
-			right: 100px; /* Отступ справа */
-		}
-		
-		.dropdown-content {
-			display: none;
-			position: absolute;
-			background-color: #f9f9f9;
-			min-width: 100px;
-			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-			z-index: 1;
-		}
-		
-		.dropdown:hover .dropdown-content {
-			display: block;
-		}
-		
-		.dropdown-content a {
-			color: black;
-			padding: 12px 16px;
-			text-decoration: none;
-			display: block;
-		
-		}
-		
-		.dropdown-content a:hover {
-			background-color: #ffad4a;
-			border-radius: 7px;
-			width: 100px;
-		}
-		</style>
-		
-		
-		<div class="dropdown">
-		<span>Language</span>
-		<div class="dropdown-content">
-			<!-- Добавленные кнопки-ссылки -->
-			<a href="file:///C:/Users/Footile/Desktop/Site/page1/practice-starter-template-main/index.html" id="russian">Русский</a>
-			<a href="https://www.example.com" id="english">English</a>
-			<a href="https://www.example.com" id="french">Français</a>
-		</div>
-		</div>
-		</nav>
-		</body>
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
 
-		</nav>
+    .dropdown-content a:hover {
+        background-color: #ffad4a;
+        border-radius: 7px;
+        width: 100px;
+    }
+    </style>
 
-		<header class="header" style="background-image: url(header.jpg);">
-			<div class="conteiner">
-				<div class="row">
+    <div class="dropdown">
+        <span>Language</span>
+        <div class="dropdown-content">
+            <!-- Добавленные кнопки-ссылки -->
+            <a href="index.html" id="russian">Русский</a>
+            <a href="https://www.example.com" id="english">English</a>
+            <a href="https://www.example.com" id="french">Français</a>
+        </div>
+    </div>
 
-					<div class="col-lg-8 offset-lg-2 header-content">
-						<h1>Savoureux comme à la maison</h1>
-						<h4>Toute la nourriture est préparée avec amour et soin</h4>
+    <header class="header" style="background-image: url('header.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 header-content">
+                    <h1>Savoureux comme à la maison</h1>
+                    <h4>Toute la nourriture est préparée avec amour et soin</h4>
+                    <a href="menu/index.html">
+                        <button class="btn-main">Купить</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </header>
 
-						<a href="file:///C:/Users/Footile/Desktop/Site/menu/practice-starter-template-main/index.html">
-							<button class="btn-main">Купить</button>
-						</a>
-					</div>
-
-				</div>
-			</div>
-
-			<div class="overlay"></div>
-
-		</header>
-		
-		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-
-		
-	</body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
 </html>
